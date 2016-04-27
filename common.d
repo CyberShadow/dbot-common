@@ -1,4 +1,4 @@
-module common.common;
+module dbot.common;
 
 import ae.utils.json;
 
