@@ -1,10 +1,11 @@
 /// Build/Test logic
 
-/// This code is used by the client to actually decide what
-/// should be done, and by the server for display purposes.
-
 module dbot.config;
 
+/// These are used by the client to actually decide what
+/// should be done, and by the server for display purposes.
+
+/// Should we build this component on this client?
 bool shouldBuild(string clientID, string componentName)
 {
 	switch (componentName)
@@ -21,6 +22,7 @@ bool shouldBuild(string clientID, string componentName)
 	}
 }
 
+/// Should we test this component on this client?
 bool shouldTest(string clientID, string componentName)
 {
 	switch (componentName)
@@ -32,6 +34,7 @@ bool shouldTest(string clientID, string componentName)
 	}
 }
 
+/// Should we run benchmarks on this client?
 bool shouldBenchmark(string clientID)
 {
 	return clientID == "local";
