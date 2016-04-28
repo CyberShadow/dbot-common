@@ -39,3 +39,10 @@ bool shouldBenchmark(string clientID)
 {
 	return clientID == "local";
 }
+
+/// This one is only used by the server.
+/// Should we build old versions when we're idle on this client?
+bool shouldScheduleHistory(string clientID)
+{
+	return clientID == "local";
+}
