@@ -15,7 +15,7 @@ bool shouldBuild(string clientID, string componentName)
 		case "rdmd":
 			return true;
 		case "website":
-			return clientID == "k3";
+			return clientID == "local";
 		default:
 			return false;
 	}
@@ -34,5 +34,5 @@ bool shouldTest(string clientID, string componentName)
 
 bool shouldBenchmark(string clientID)
 {
-	return clientID == "k3";
+	return clientID == "local";
 }
