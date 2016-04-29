@@ -31,6 +31,7 @@ struct Message
 	{
 		enum Type
 		{
+			start, /// Implicit
 			fetch,
 			merge,
 			build,
