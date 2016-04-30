@@ -17,10 +17,11 @@ struct Message
 	{
 		enum Type
 		{
-			stdout,
-			stderr,
-			log,
-			error,
+			stdout, /// Standard output line from a child process.
+			stderr, /// Standard error line from a child process.
+			log,    /// ae.sys.d or other client log message.
+			server, /// Server log message.
+			error,  /// Client error text.
 		}
 		Type type;
 		string text;
